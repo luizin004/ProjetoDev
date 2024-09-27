@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumo do Aluguel</title>
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./script.js"></script>
+</head>
+
+<body>
+    <h1>Revisão do Pedido</h1>
+    <h3>Valor Total: <span id="valorTotal">R$ 0,00</span></h3>
+    <p>Retire seus produtos na loja!</p>
+    <button onclick="finalizarPedido()">Finalizar Pedido</button>
+
+    <script>
+        // Função para exibir o valor total armazenado
+        document.addEventListener("DOMContentLoaded", function() {
+            const precoTotal = localStorage.getItem("precoTotal");
+            if (precoTotal) {
+                document.getElementById("valorTotal").innerText = `R$ ${parseFloat(precoTotal).toFixed(2)}`;
+            } else {
+                document.getElementById("valorTotal").innerText = "R$ 0,00"; // Exibe R$ 0,00 se não houver valor
+            }
+        });
+
+        // Função para finalizar o pedido
+        function finalizarPedido() {
+            alert("Pedido finalizado! Agradecemos pela sua compra.");
+            localStorage.clear(); // Limpa os dados após finalizar o pedido
+            window.location.href = "index.html"; // Redireciona para a página inicial ou qualquer outra página
+        }
+    </script>
+    
+</body>
+</html>

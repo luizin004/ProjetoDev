@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conclusão do Pedido</title>
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./script.js"></script>
+</head>
+
+<body>
+    <h1>Conclusão do Pedido</h1>
+
+    <h2 id="temaEscolhido">Tema: </h2>
+    <h3>Resumo do Pedido</h3>
+    <p id="detalhesPedido">Você escolheu o tema e o preço final é de: <span id="valorFinal">R$ 0,00</span></p>
+
+    <p>Retire seus produtos na loja!</p>
+
+    <button onclick="finalizarPedido()">Finalizar Pedido</button>
+
+    <script>
+        // Função para carregar os detalhes do tema e valor do pedido
+        document.addEventListener("DOMContentLoaded", function() {
+            const tema = localStorage.getItem("tema");
+            const preco = localStorage.getItem("preco");
+
+            if (tema && preco) {
+                // Se os valores existem, exibe-os na página
+                document.getElementById("temaEscolhido").innerText = `Tema: ${tema}`;
+                document.getElementById("valorFinal").innerText = `R$ ${parseFloat(preco).toFixed(2)}`;
+            } else {
+                // Se os valores não existem, mostra uma mensagem de erro ou padrão
+                document.getElementById("temaEscolhido").innerText = "Tema: não disponível";
+                document.getElementById("valorFinal").innerText = "R$ 0,00";
+                alert("Erro: não foi possível carregar os detalhes do pedido.");
+            }
+        });
+
+        // Função para finalizar o pedido
+        function finalizarPedido() {
+            alert("Pedido finalizado! Agradecemos pela sua compra.");
+            localStorage.clear(); // Limpa os dados após finalizar o pedido
+            window.location.href = "index.html"; // Redireciona para a página inicial
+        }
+    </script>
+</body>
+
+</html>
+

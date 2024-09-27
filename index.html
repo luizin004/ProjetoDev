@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aluguel de Artigos de Festa</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet">
+    <script defer src="./script.js"></script>
+</head>
+
+<body>
+    <!-- Menu de Navegação -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li><a href="#mapa">Localização</a></li>
+            <li><a href="#info-produtos">Produtos</a></li>
+        </ul>
+    </nav>
+
+    <!-- Linha de temas -->
+    <section id="temas">
+        <h1>Decor Festas</h1>
+        <h2>Escolha um tema para sua festa</h2>
+        <div class="temas-container">
+            <div class="tema">
+                <a href="final2.html" onclick="redirecionarParaResumo('Aniversário Menino', 300)">
+                    <img src="./imagens/i 'd like to ma 5d54464a-53e8-4620-bc55-e429063e3449.png" alt="Aniversário Menino">
+                    <p>Aniversário Menino</p>
+                </a>
+            </div>
+            <div class="tema">
+                <a href="final2.html" onclick="redirecionarParaResumo('Aniversário Menina', 350)">
+                    <img src="./imagens/i 'd like to ma ba386dc4-be9f-4056-876c-0f5233b0cece.png" alt="Aniversário Menina">
+                    <p>Aniversário Menina</p>
+                </a>
+            </div>
+            <div class="tema">
+                <a href="final2.html" onclick="redirecionarParaResumo('Tema Marinho', 400)">
+                    <img src="./imagens/i 'd like to ma 0cd5bf73-c2d9-40e7-8063-df60b8b97d54.png" alt="Tema Marinho">
+                    <p>Tema Marinho</p>
+                </a>
+            </div>
+            <div class="tema">
+                <a href="final2.html" onclick="redirecionarParaResumo('Tema Natal', 450)">
+                    <img src="./imagens/i 'd like to ma 54edd792-4a11-450e-9324-2847be2aef52.png" alt="Tema Natal">
+                    <p>Tema Natal</p>
+                </a>
+            </div>
+            <div class="tema">
+                <a href="final2.html" onclick="redirecionarParaResumo('Ano Novo', 500)">
+                    <img src="./imagens/UzKcPyerQ02xVCfzX4LFVrVGJOe0wAGSrrZ6idS8u6HUW5BnA.png" alt="Tema Ano Novo">
+                    <p>Tema Ano Novo</p>
+                </a>
+            </div>
+            <div class="tema">
+                <a href="personalizado.html">
+                    <img src="./imagens/Bifg5EZgUz0RUaRREacil74qeIxnETDfwMxlhiOzN76gx5BnA.png" alt="Tema Personalizado">
+                    <p>Tema Personalizado</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function redirecionarParaResumo(tema, preco) {
+            localStorage.setItem("tema", tema); // Armazena o tema
+            localStorage.setItem("preco", preco); // Armazena o preço
+            window.location.href = "final2.html"; // Redireciona para a página de resumo
+        }
+    </script>
+
+    <!-- Seção de informações sobre produtos -->
+    <section id="info-produtos">
+        <h2>Nossos Produtos</h2>
+        <p>Todos os nossos produtos são cuidadosamente manejados de forma manual, garantindo a melhor qualidade para sua festa.</p>
+        <p>Além disso, oferecemos a opção de frete para maior conveniência. Consulte as condições no momento da reserva!</p>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section id="contato">
+        <h2>Contato</h2>
+        <p>Entre em contato conosco para tirar dúvidas ou fazer sua reserva:</p>
+        <ul>
+            <li>Email: contato@decorfestas.com.br</li>
+            <li>Telefone: (31) 3333-4444</li>
+            <li>WhatsApp: (31) 99999-8888</li>
+        </ul>
+    </section>
+
+    <!-- Mapa -->
+    <section id="mapa">
+        <h2>Nosso Local</h2>
+        <p>Estamos localizados em Itabira - Centro.</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3796.5384857395956!2d-43.230243384496894!3d-19.623198987676654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa2b158fc2905d1%3A0xab1326e54b66b698!2sCentro%2C%20Itabira%20-%20MG%2C%2035900-021!5e0!3m2!1spt-BR!2sbr!4v1695690152757!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Aluguel de Artigos de Festa. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+
+</html>

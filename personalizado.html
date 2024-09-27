@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Aluguel</title>
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./script.js"></script>
+</head>
+<body>
+    <h1>Alugue Produtos de Festa</h1>
+    <section>
+        <h2>Escolha seus Produtos</h2>
+        <form id="aluguelForm" onsubmit="return false;">
+            <label for="dias">Dias de aluguel (1 a 4):</label>
+            <input type="number" id="dias" name="dias" min="1" max="4" required>
+            
+            <h3>Selecione os Produtos:</h3>
+            
+            <label for="pratos">Pratos:</label>
+            <select id="pratos" name="pratos">
+                <option value="20">Prato Dourado - R$ 20,00/dia</option>
+                <option value="15">Prato Branco - R$ 15,00/dia</option>
+                <option value="18">Prato Azul - R$ 18,00/dia</option>
+                <option value="22">Prato Vermelho - R$ 22,00/dia</option>
+            </select>
+            
+            <label for="talheres">Talheres:</label>
+            <select id="talheres" name="talheres">
+                <option value="10">Talher Preto - R$ 10,00/dia</option>
+                <option value="12">Talher Prata - R$ 12,00/dia</option>
+                <option value="15">Talher Dourado - R$ 15,00/dia</option>
+                <option value="14">Talher Azul - R$ 14,00/dia</option>
+            </select>
+
+            <label for="decoracao">Decoração:</label>
+            <select id="decoracao" name="decoracao">
+                <option value="20">Decoração Simples Branca - R$ 20,00/dia</option>
+                <option value="25">Decoração Simples Azul - R$ 25,00/dia</option>
+                <option value="40">Decoração Detalhada Branca - R$ 40,00/dia</option>
+                <option value="45">Decoração Detalhada Azul - R$ 45,00/dia</option>
+            </select>
+
+            <label for="tacas">Taças:</label>
+            <select id="tacas" name="tacas">
+                <option value="30">Cristal - R$ 30,00/dia</option>
+                <option value="25">Vidro - R$ 25,00/dia</option>
+                <option value="28">Taça Azul - R$ 28,00/dia</option>
+                <option value="32">Taça Verde - R$ 32,00/dia</option>
+            </select>
+
+            <button type="button" onclick="calcularPreco()">Calcular Preço</button>
+        </form>
+
+        <h3>Total: <span id="precoTotal">R$ 0,00</span></h3>
+        <button type="button" onclick="continuarCompra()">Continuar Compra</button>
+
+    </section>
+</body>
