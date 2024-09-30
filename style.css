@@ -215,3 +215,15 @@ footer {
 .success {
     color: #388e3c; /* Verde para sucesso */
 }
+/* Estilo para tornar o iframe do Google Maps responsivo */
+#mapa iframe {
+    width: 100%; 
+    height: auto; 
+    min-height: 300px; 
+    border: 0;
+}
+
+#mapa {
+    max-width: 100%; 
+    margin: 0 auto; 
+}
