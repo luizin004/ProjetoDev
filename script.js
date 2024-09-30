@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("diasAluguel").innerText = diasAluguel;
     } else {
         // Exibe uma mensagem de erro se os dados não forem encontrados
-        document.getElementById("precoTotal").innerText = "Erro: preço não calculado.";
+        document.getElementById("precoTotal").innerText = "0";
         document.getElementById("diasAluguel").innerText = "Erro: dias não selecionados.";
     }
 });
